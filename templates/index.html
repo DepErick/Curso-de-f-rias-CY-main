@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Lâmpada</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .botao {
+            font-size: 20px;
+            padding: 10px 30px;
+            margin: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .ligar {
+            background-color: #28a745;
+            color: white;
+        }
+        .desligar {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Controle de Lâmpada</h1>
+    {% if estado %}
+        <p>Lâmpada está <strong>LIGADA</strong></p>
+    {% else %}
+        <p>Lâmpada está <strong>DESLIGADA</strong></p>
+    {% endif %}
+    <a href="/ligar"><button class="botao ligar">Ligar</button></a>
+    <a href="/desligar"><button class="botao desligar">Desligar</button></a>
+</body>
+</html>
